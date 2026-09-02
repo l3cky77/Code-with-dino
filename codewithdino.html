@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code with Dino</title>
+    <style>
+        *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    body {
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+    }
+     a {
+      text-decoration: none;
+      color: inherit;
+    }
+    h1,h2,h3,h4{
+        font-family: 'Fraunces', Georgia, serif;
+        margin:0;
+    }
+    p{
+        margin:0;
+    }
+   .eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #e8a33d;
+    margin: 0 0 10px;
+}
+    
+    </style>
+</head>
+<body>
+    <nav id="mainNav">
+        <div class="nav-inner">
+            <a href="#top" class="brand">Code<span>Dino</span></a>
+    
+                <span></span><span></span><span></span>
+            </button>
+            <div id="nav1" class="nav1">
+                <a href="#courses">Courses</a>
+                <a href="#webroadmap">Roadmap</a>
+                <a href="#about">About</a>
+                <a href="#form">Application Form</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="top">
+        <div class="header-inner">
+            <p class="eyebrow">Stop searching. Start Learning.</p>
+            <h1 id="codewithdino">Code With <span>Dino</span></h1>
+            <p class="header-sub">One site to learn a language, follow a real roadmap, and track your progress toward a certificate instead of ten browser tabs.</p>
+            <div class="header-cta">
+                <a href="#courses" class="btn btn-primary">Start a course</a>
+                <a href="#webroadmap" class="btn btn-ghost">See the roadmap</a>
+            </div>
+        </div>
+        <div class="strata-decor" aria-hidden="true"></div>
+    </header>
+
+    <main>
+    <section id="courses">
+        <div class="section-head">
+            <p class="eyebrow">Module 1</p>
+            <h2>Courses</h2>
+        </div>
+        <div class="search-row">
+            <input type="search" id="courseSearch" placeholder="Search a language or track (e.g. python, react)">
+            <span id="searchCount" class="search-count"></span>
+        </div>
+
+        <h3 class="track-label">Core Languages</h3>
+        <div id="basic" class="basic card-grid">
+            <a href="#" class="course-card" data-course="python">Python</a>
+            <a href="#" class="course-card" data-course="kotlin">Kotlin</a>
+            <a href="#" class="course-card" data-course="go">Go</a>
+            <a href="#" class="course-card" data-course="java">Java</a>
+            <a href="#" class="course-card" data-course="c++">C++</a>
+            <a href="#" class="course-card" data-course="c">C</a>
+        </div>
+    </section>
+
+    <section id="Web">
+        <div class="section-head">
+            <p class="eyebrow">Module 2</p>
+            <h2>Web Development</h2>
+        </div>
+        <div id="webbasic" class="basic card-grid">
+            <a href="#" class="course-card" data-course="html">HTML</a>
+            <a href="#" class="course-card" data-course="css">CSS</a>
+            <a href="#" class="course-card" data-course="javascript">JavaScript</a>
+            <a href="#" class="course-card" data-course="react js">React JS</a>
+            <a href="#" class="course-card" data-course="angular">Angular</a>
+            <a href="#" class="course-card" data-course="node js">Node JS</a>
+            <a href="#" class="course-card" data-course="django">Django</a>
+            <a href="#" class="course-card" data-course="flask">Flask</a>
+            <a href="#" class="course-card" data-course="fast api">FastAPI</a>
+        </div>
+    </section>
+
+    <section id="webroadmap">
+        <div class="section-head">
+            <p class="eyebrow">Module a3</p>
+            <h2>Web Development Roadmap</h2>
+            <p class="section-note">Excavate top to bottom  each layer builds on the one below it.</p>
+        </div>
+
+        <div class="strata" data-stage="Frontend">
+            <h3 class="strata-title"><span class="strata-mark">Layer 1</span> Frontend</h3>
+            <div class="strata-items">
+                <div class="dig-item">
+                    <h4>HTML</h4>
+                    <p>The structure of a web page  the skeleton every layer above rests on.</p>
+                </div>
+                <div class="dig-item">
+                    <h4>CSS</h4>
+                    <p>The styling layer that turns bare structure into a page people want to look at.</p>
+                </div>
+                <div class="dig-item">
+                    <h4>JavaScript</h4>
+                    <p>The behavior layer  makes the page respond, move, and react to people.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="strata" data-stage="Framework">
+            <h3 class="strata-title"><span class="strata-mark">Layer 2</span> Framework</h3>
+            <div class="strata-items">
+                <div class="dig-item">
+                    <h4>React JS</h4>
+                    <p>A component-based library for building interactive interfaces at scale.</p>
+                </div>
+                <div class="dig-item">
+                    <h4>Next JS</h4>
+                    <p>A React framework that adds routing, rendering strategy, and structure.</p>
+                </div>
+                <div class="dig-item">
+                    <h4>Angular</h4>
+                    <p>A full, opinionated framework for large, structured front-end applications.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="strata" data-stage="Backend">
+            <h3 class="strata-title"><span class="strata-mark">Layer 3</span> Backend</h3>
+            <div class="strata-items">
+                <div class="dig-item">
+                    <h4>Django</h4>
+                    <p>A batteries-included Python framework for building full server-side apps fast.</p>
+                </div>
+                <div class="dig-item">
+                    <h4>Flask</h4>
+                    <p>A lightweight Python framework that gives you the pieces without the ceremony.</p>
+                </div>
+                <div class="dig-item">
+                    <h4>FastAPI</h4>
+                    <p>A modern, high-performance Python framework built for APIs and async code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-inner">
+            <p class="eyebrow">About</p>
+            <h2>Why this site exists</h2>
+            <p>Code With Dino is built for people who struggle to find a clear path to learn &mdash; one place to pick a course, follow a real roadmap, and work toward a certificate instead of piecing it together from scattered sites.</p>
+        </div>
+    </section>
+
+    <section id="form" class="form">
+        <div class="section-head">
+            <p class="eyebrow">Tell us</p>
+            <h2>What's blocking your learning?</h2>
+        </div>
+        <form id="problemForm" novalidate>
+            <label for="fullName">Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
+            <label for="emailAddr">Email</label>
+            <input type="email" id="emailAddr" name="emailAddr" placeholder="Enter your email" required>
+            <label for="problemText">Your problem</label>
+            <textarea id="problemText" name="problemText" rows="3" placeholder="What's making it hard to learn right now?"></textarea>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-head">
+            <p class="eyebrow">Contact</p>
+            <h2>Get in touch</h2>
+        </div>
+        <div class="contact-links">
+            <a href="#" target="_blank" rel="noopener">Instagram</a>
+            <a href="mailto:tejashsomu41@gmail.com">Gmail</a>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        <p>Tejashsomu &copy; Copyrights 2026</p>
+    </footer>
+
+</body>
+</html>
