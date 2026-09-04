@@ -969,6 +969,364 @@ footer {
         <p>Tejashsomu &copy; Copyrights 2026</p>
     </footer>
     <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    const nav = document.getElementById("mainNav");
+    const navToggle = document.getElementById("navToggle");
+    const navMenu = document.getElementById("nav1");
+    const navLinks = document.querySelectorAll(".nav1 a");
+
+    // Mobile navigation toggle
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("open");
+
+        const isOpen = navMenu.classList.contains("open");
+
+        navToggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    // Close mobile menu after clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+        });
+    });
+
+
+    /* =========================
+       NAVBAR SCROLL EFFECT
+    ========================= */
+
+    function handleNavbarScroll() {
+        if (window.scrollY > 30) {
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
+    }
+
+    window.addEventListener("scroll", handleNavbarScroll);
+
+    // Run once when page loads
+    handleNavbarScroll();
+
+
+    /* =========================
+       COURSE SEARCH
+    ========================= */
+
+    const searchInput = document.getElementById("courseSearch");
+    const searchCount = document.getElementById("searchCount");
+
+    const courseCards = document.querySelectorAll(".course-card");
+
+    function searchCourses() {
+
+        const searchValue = searchInput.value
+            .toLowerCase()
+            .trim();
+
+        let visibleCourses = 0;
+
+        courseCards.forEach(card => {
+
+            const courseName = card.dataset.course
+                ? card.dataset.course.toLowerCase()
+                : card.textContent.toLowerCase();
+
+            const displayName = card.textContent.toLowerCase();
+
+            const matches =
+                courseName.includes(searchValue) ||
+                displayName.includes(searchValue);
+
+            if (matches) {
+                card.classList.remove("hidden");
+                visibleCourses++;
+            } else {
+                card.classList.add("hidden");
+            }
+        });
+
+        // Show result count only when searching
+        if (searchValue === "") {
+            searchCount.textContent = "";
+        } else {
+            searchCount.textContent =
+                `${visibleCourses} course${visibleCourses !== 1 ? "s" : ""} found`;
+        }
+    }
+
+    searchInput.addEventListener("input", searchCourses);
+
+
+    /* =========================
+       SMOOTH SCROLLING
+    ========================= */
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+        link.addEventListener("click", function(event) {
+
+            const targetId = this.getAttribute("href");
+
+            if (targetId === "#") {
+                return;
+            }
+
+            const target = document.querySelector(targetId);
+
+            if (target) {
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        });
+
+    });
+
+
+    /* =========================
+       ACTIVE NAVIGATION LINK
+    ========================= */
+
+    const sections = document.querySelectorAll(
+        "header[id], main section[id]"
+    );
+
+    function updateActiveNav() {
+
+        let currentSection = "";
+
+        sections.forEach(section => {
+
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (
+                window.scrollY >= sectionTop - 150 &&
+                window.scrollY < sectionTop + sectionHeight - 150
+            ) {
+                currentSection = section.id;
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            const linkTarget = link.getAttribute("href");
+
+            if (linkTarget === `#${currentSection}`) {
+                link.classList.add("active");
+            }
+
+        });
+    }
+
+    window.addEventListener("scroll", updateActiveNav);
+
+    updateActiveNav();
+
+
+    /* =========================
+       REVEAL ANIMATIONS
+    ========================= */
+
+    const revealElements = document.querySelectorAll(
+        ".section-head, .course-card, .strata, .dig-item, .about-inner, .form, .contact"
+    );
+
+    revealElements.forEach(element => {
+        element.classList.add("reveal");
+    });
+
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                    observer.unobserve(entry.target);
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+    revealElements.forEach(element => {
+        revealObserver.observe(element);
+    });
+
+
+    /* =========================
+       APPLICATION FORM
+    ========================= */
+
+    const problemForm = document.getElementById("problemForm");
+    const formStatus = document.getElementById("formStatus");
+
+    const fullName = document.getElementById("fullName");
+    const emailAddr = document.getElementById("emailAddr");
+    const problemText = document.getElementById("problemText");
+
+    problemForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        // Clear previous status
+        formStatus.textContent = "";
+        formStatus.className = "form-status";
+
+        const name = fullName.value.trim();
+        const email = emailAddr.value.trim();
+        const problem = problemText.value.trim();
+
+
+        /* Validation */
+
+        if (name === "") {
+
+            showError("Please enter your name.");
+            fullName.focus();
+            return;
+        }
+
+        if (email === "") {
+
+            showError("Please enter your email.");
+            emailAddr.focus();
+            return;
+        }
+
+        if (!isValidEmail(email)) {
+
+            showError("Please enter a valid email address.");
+            emailAddr.focus();
+            return;
+        }
+
+        if (problem === "") {
+
+            showError("Please tell us what is blocking your learning.");
+            problemText.focus();
+            return;
+        }
+
+
+        /* Successful submission */
+
+        formStatus.textContent =
+            `Thanks, ${name}! Your response has been submitted.`;
+
+        formStatus.classList.add("success");
+
+        // Reset form
+        problemForm.reset();
+
+    });
+
+
+    /* =========================
+       EMAIL VALIDATION
+    ========================= */
+
+    function isValidEmail(email) {
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        return emailPattern.test(email);
+    }
+
+
+    /* =========================
+       FORM ERROR MESSAGE
+    ========================= */
+
+    function showError(message) {
+
+        formStatus.textContent = message;
+
+        formStatus.classList.add("error");
+    }
+
+
+    /* =========================
+       COURSE CARD KEYBOARD SUPPORT
+    ========================= */
+
+    courseCards.forEach(card => {
+
+        card.addEventListener("keydown", event => {
+
+            if (event.key === "Enter") {
+                card.click();
+            }
+
+        });
+
+    });
+
+
+    /* =========================
+       ESCAPE KEY
+       CLOSE MOBILE MENU
+    ========================= */
+
+    document.addEventListener("keydown", event => {
+
+        if (event.key === "Escape") {
+
+            navMenu.classList.remove("open");
+
+            navToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+
+    });
+
+
+    /* =========================
+       PREVENT EMPTY INSTAGRAM LINK
+    ========================= */
+
+    const contactLinks = document.querySelectorAll(".contact-links a");
+
+    contactLinks.forEach(link => {
+
+        if (link.getAttribute("href") === "#") {
+
+            link.addEventListener("click", event => {
+                event.preventDefault();
+            });
+
+        }
+
+    });
+
+});
+
   </script>
 </body>
 </html>
