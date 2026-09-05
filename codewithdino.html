@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -100,7 +100,7 @@ textarea {
 .brand {
     font-size: 1.3rem;
     font-weight: 800;
-    letter-spacing: 2.5px;
+    letter-spacing: -0.5px;
 }
 
 .brand span {
@@ -793,7 +793,6 @@ footer {
         flex-wrap: wrap;
     }
 }
-      
     </style>
 </head>
 <body>
@@ -839,12 +838,157 @@ footer {
 
         <h3 class="track-label">Core Languages</h3>
         <div id="basic" class="basic card-grid">
-            <a href="https://www.freecodecamp.org/learn/python-v9/" class="course-card" data-course="python" target="_blank">Python</a>
-            <a href="https://www.classcentral.com/course/developer-android-basics-kotlin-99173" class="course-card" data-course="kotlin" target="_blank">Kotlin</a>
-            <a href="https://coddy.tech/certification/go" class="course-card" data-course="go">Go</a>
-            <a href="https://learn.oracle.com/ols/learning-path/oracle-java-foundations/88323/79726" class="course-card" data-course="java" target="_blank">Java</a>
-            <a href="https://www.netacad.com/learning-collections/c-plus-plus?courseLang=en-US" class="course-card" data-course="c++"target="_blank">C++</a>
-            <a href="https://www.mygreatlearning.com/academy/learn-for-free/courses/c-for-beginners1" class="course-card" data-course="c"target="_blank">C</a>
+            <button class="course-card" id="python"data-course="python" id="course-card"style="color:white">Python</button>
+            <div class="strata" id="python-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> Python</h3>
+            <div class="strata-items">
+                <div class="dig-item">
+                    <a href="https://www.coursera.org/specializations/python" target="_blank">
+                    <h4>Coursera</h4>
+                    <p>Coursera Providing an paid Python Course Monthly 625 Rupees</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <div class="dig-item">
+                    <a href="https://developer.ibm.com/languages/python/courses/" target="_blank">
+                    <h4>IBM</h4>
+                    <p>IBM Provides an Free Python course for begineers.</p>
+                    </a>
+                </div>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="https://bugs.python.org" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
+            <button class="course-card" data-course="kotlin" style="color:white" id="kotlin">Kotlin</button>
+             <div class="strata" id="kotlin-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> Python</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <a href="https://www.classcentral.com/course/developer-android-basics-kotlin-99173" target="_blank">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
+            <button class="course-card" data-course="go" id="go"style="color:white">Go</button>
+            <div class="strata" id="go-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> Python</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <a href="https://www.classcentral.com/course/developer-android-basics-kotlin-99173" target="_blank">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
+            <button class="course-card" data-course="java" id="java"style="color:white">Java</button>
+            <div class="strata" id="java-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> Python</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <a href="https://www.classcentral.com/course/developer-android-basics-kotlin-99173" target="_blank">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
+            <button class="course-card" id="cpp" data-course="c++"style="color:white">C++</button>
+            <div class="strata" id="cpp-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> Python</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <a href="https://www.classcentral.com/course/developer-android-basics-kotlin-99173" target="_blank">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
+            <button class="course-card" id="c"data-course="c"style="color:white">C</button>
+             <div class="strata" id="c-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> C</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <a href="https://www.classcentral.com/course/developer-android-basics-kotlin-99173" target="_blank">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
         </div>
     </section>
 
@@ -853,22 +997,253 @@ footer {
             <p class="eyebrow">Module 2</p>
             <h2>Web Development</h2>
         </div>
+        
+        
+        
         <div id="webbasic" class="basic card-grid">
-            <a href="https://developers.google.com/profile/badges/playlists/webdev/learn-html" class="course-card" data-course="html"target="_blank">HTML</a>
-            <a href="https://www.freecodecamp.org/learn/responsive-web-design-v9/" class="course-card" data-course="css"target="_blank">CSS</a>
-            <a href="https://www.freecodecamp.org/learn/javascript-v9/" class="course-card" data-course="javascript"target="_blank">JavaScript</a>
-            <a href="https://www.scaler.com/topics/course/free-react-js-course/" class="course-card" data-course="react js"target="_blank">React JS</a>
-            <a href="https://www.mygreatlearning.com/angular/free-courses" class="course-card" data-course="angular"target="_blank">Angular</a>
-            <a href="https://www.codecademy.com/learn/learn-node-js" class="course-card" data-course="node js"target="_blank">Node JS</a>
-            <a href="https://www.geeksforgeeks.org/blogs/best-free-django-course-online/" class="course-card" data-course="django"target="_blank">Django</a>
-            <a href="https://www.mygreatlearning.com/academy/learn-for-free/courses/flask-python" class="course-card" data-course="flask"target="_blank">Flask</a>
-            <a href="https://www.classcentral.com/course/codesignal-fastapi-essentials-for-python-developers-361287" class="course-card" data-course="fast api"target="_blank">FastAPI</a>
+            <button id="html"class="course-card" data-course="html">HTML</button>
+            <div class="strata" id="html-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> Html</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <a href="https://developers.google.com/profile/badges/playlists/webdev/learn-html" target="_blank">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
+            
+            
+            <button id="css"class="course-card" data-course="css">CSS</button>
+            <div class="strata" id="css-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> C</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <a href="https://www.freecodecamp.org/learn/responsive-web-design-v9/" target="_blank">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
+            
+            
+            <button class="course-card" id="javascript" data-course="javascript"target="_blank">JavaScript</button>
+            <div class="strata" id="javascript-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> C</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <a href="https://www.freecodecamp.org/learn/javascript-v9/"target="_blank">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
+            <button  id="react"class="course-card" data-course="react js">React JS</button>
+            <div class="strata" id="react-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> C</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">paid</span>
+                    <a href="https://www.scaler.com/topics/course/free-react-js-course/">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
+            <button class="course-card" id="angular"data-course="angular"target="_blank">Angular</button>
+            <div class="strata" id="angular-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> C</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <a https://www.mygreatlearning.com/angular/free-courses" target="_blank">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
+            <button class="course-card" id="node" data-course="node js"target="_blank">Node JS</button>
+            <div class="strata" id="node-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> C</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <a href="https://www.codecademy.com/learn/learn-node-js" target="_blank">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
+            <button id="django" class="course-card" data-course="django"target="_blank">Django</button>
+            <div class="strata" id="django-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> C</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <a href="https://www.geeksforgeeks.org/blogs/best-free-django-course-online/" target="_blank">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
+            <button id="flask"class="course-card" data-course="flask">Flask</button>
+            <div class="strata" id="flask-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> C</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <a href="https://www.mygreatlearning.com/academy/learn-for-free/courses/flask-python" target="_blank">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
+            <button id="fastapi"class="course-card" data-course="fast api"style="color:white">FastAPI</button>
+            <div class="strata" id="fastapi-course"data-stage="Framework" style="display:none">
+            <h3 class="strata-title"><span class="strata-mark">Paid</span> C</h3>
+            <div class="strata-items">
+                <a href="https://blog.jetbrains.com/kotlin/2026/04/kotlin-professional-certificate-by-jetbrains-now-on-linkedin-learning/" target="_blank">
+                <div class="dig-item">
+                    <h4>JetBrains</h4>
+                    <p>JetBrains Providing an paid Python Course Monthly $240 Annual in Linkdin</p>
+                </div>
+                </a>
+                <span class="strata-mark" style="width:50px">Free</span>
+                <a href="https://www.classcentral.com/course/codesignal-fastapi-essentials-for-python-developers-361287" target="_blank">
+                <div class="dig-item">
+                    <h4>Class Central</h4>
+                    <p>A free, self-paced online curriculum by Google via Class Central designed for beginners to learn app building and prepare for official certification paths.</p>
+                </div>
+                <span class="strata-mark" style="width:60px">Notes</span>
+                <a href="#" target="_blank">
+                <div class="dig-item">
+                    <h4>Notes</h4>
+                    <p>Free Python Notes For Begineers Pdf Format</p>
+                </div>
+                </a>
+            </div>
+        </div>
         </div>
     </section>
 
     <section id="webroadmap">
         <div class="section-head">
-            <p class="eyebrow">Module a3</p>
+            <p class="eyebrow">Module 3</p>
             <h2>Web Development Roadmap</h2>
             <p class="section-note">Excavate top to bottom  each layer builds on the one below it.</p>
         </div>
@@ -969,6 +1344,7 @@ footer {
         <p>Tejashsomu &copy; Copyrights 2026</p>
     </footer>
     <script>
+    
 document.addEventListener("DOMContentLoaded", () => {
 
     /* =========================
@@ -1003,7 +1379,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ========================= */
 
     function handleNavbarScroll() {
-        if (window.scrollY > 30) {
+        if (window.scrollY > 60) {
             nav.classList.add("scrolled");
         } else {
             nav.classList.remove("scrolled");
@@ -1326,7 +1702,172 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-
+const slide = document.getElementById("python");
+    const details = document.getElementById("python-course");
+    slide.addEventListener("click",event =>{
+        if(details.style.display === "none"){
+            details.style.display = "block";
+        }
+        else{
+            details.style.display = "none";
+        }
+    });
+    const slide1 = document.getElementById("kotlin");
+    const details1 = document.getElementById("kotlin-course");
+    slide1.addEventListener("click",event =>{
+        if(details1.style.display === "none"){
+            details1.style.display = "block";
+        }
+        else{
+            details1.style.display = "none";
+        }
+    });
+    const slide2 = document.getElementById("go");
+    const details2 = document.getElementById("go-course");
+    slide2.addEventListener("click",event =>{
+        if(details2.style.display === "none"){
+            details2.style.display = "block";
+        }
+        else{
+            details2.style.display = "none";
+        }
+    });
+    const slide3 = document.getElementById("java");
+    const details3 = document.getElementById("java-course");
+    slide3.addEventListener("click",event =>{
+        if(details3.style.display === "none"){
+            details3.style.display = "block";
+        }
+        else{
+            details3.style.display = "none";
+        }
+    });
+    const slide4 = document.getElementById("cpp");
+    const details4 = document.getElementById("cpp-course");
+    slide4.addEventListener("click",event =>{
+        if(details4.style.display === "none"){
+            details4.style.display = "block";
+        }
+        else{
+            details4.style.display = "none";
+        }
+    });
+    const slide5 = document.getElementById("c");
+    const details5 = document.getElementById("c-course");
+    slide5.addEventListener("click",event =>{
+        if(details5.style.display === "none"){
+            details5.style.display = "block";
+        }
+        else{
+            details5.style.display = "none";
+        }
+    });
+   const slide6 = document.getElementById("html");
+    const details6 = document.getElementById("html-course");
+    slide6.addEventListener("click",event =>{
+        if(details6.style.display === "none"){
+            details6.style.display = "block";
+        }
+        else{
+            details6.style.display = "none";
+        }
+    });
+    const slide7 = document.getElementById("css");
+    const details7 = document.getElementById("css-course");
+    slide7.addEventListener("click",event =>{
+        if(details7.style.display === "none"){
+            details7.style.display = "block";
+        }
+        else{
+            details7.style.display = "none";
+        }
+    });
+    const slide8 = document.getElementById("javascript");
+    const details8 = document.getElementById("javascript-course");
+    slide8.addEventListener("click",event =>{
+        if(details8.style.display === "none"){
+            details8.style.display = "block";
+        }
+        else{
+            details8.style.display = "none";
+        }
+    });
+    const slide9 = document.getElementById("react");
+    const details9 = document.getElementById("react-course");
+    slide9.addEventListener("click",event =>{
+        if(details9.style.display === "none"){
+            details9.style.display = "block";
+        }
+        else{
+            details9.style.display = "none";
+        }
+    });
+    const slide10 = document.getElementById("angular");
+    const details10 = document.getElementById("angular-course");
+    slide10.addEventListener("click",event =>{
+        if(details10.style.display === "none"){
+            details10.style.display = "block";
+        }
+        else{
+            details10.style.display = "none";
+        }
+    });
+    const slide11 = document.getElementById("node");
+    const details11 = document.getElementById("node-course");
+    slide11.addEventListener("click",event =>{
+        if(details11.style.display === "none"){
+            details11.style.display = "block";
+        }
+        else{
+            details11.style.display = "none";
+        }
+    });
+    const slide12 = document.getElementById("django");
+    const details12 = document.getElementById("django-course");
+    slide12.addEventListener("click",event =>{
+        if(details12.style.display === "none"){
+            details12.style.display = "block";
+        }
+        else{
+            details12.style.display = "none";
+        }
+    });
+    const slide13 = document.getElementById("flask");
+    const details13 = document.getElementById("flask-course");
+    slide13.addEventListener("click",event =>{
+        if(details13.style.display === "none"){
+            details13.style.display = "block";
+        }
+        else{
+            details13.style.display = "none";
+        }
+    });
+    const slide14 = document.getElementById("fastapi");
+    const details14 = document.getElementById("fastapi-course");
+    slide14.addEventListener("click",event =>{
+        if(details14.style.display === "none"){
+            details14.style.display = "block";
+        }
+        else{
+            details14.style.display = "none";
+        }
+    });
   </script>
 </body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
 </html>
